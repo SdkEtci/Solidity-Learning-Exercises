@@ -15,7 +15,7 @@ This repository is a resource for anyone interested in learning Solidity, the pr
 
 - Clone this repository:
 
-git clone https://github.com/your-username/solidity-lessons.git
+git clone https://github.com/SdkEtci/Solidity-Learning-Exercises.git
 
 cd solidity-lessons
 
