@@ -10,7 +10,6 @@ contract Products{
     }
 
     Product[] productList;
-    mapping(uint8 => address) wallets;
     address owner;
 
     constructor(){
@@ -34,7 +33,6 @@ contract Products{
             barcode: _barcode,
             station: _station
         });
-        
         productList.push(newProduct);
     }
     
@@ -65,13 +63,11 @@ contract Products{
     }
 
     function isThereBarcode(uint8 _barcode) public view returns(bool){
-        
         for (uint i = 0; i < productList.length; i++) {
             if (productList[i].barcode == _barcode) {
                 return true;
             }
         }
-
         return false;
     }
 }
