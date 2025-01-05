@@ -77,6 +77,25 @@
 				"inputs": [
 					{
 						"internalType": "uint8",
+						"name": "_stationNumber",
+						"type": "uint8"
+					}
+				],
+				"name": "getStationWallet",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
 						"name": "_barcode",
 						"type": "uint8"
 					}
@@ -101,6 +120,24 @@
 					}
 				],
 				"name": "transfer_ownership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_stationWallet",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "_walletAddress",
+						"type": "address"
+					}
+				],
+				"name": "updateStationWallet",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -174,11 +211,11 @@
 			]
 		},
 		"contracts/Products.sol": {
-			"keccak256": "0xf958c468d1414c0a0aaab31179d625ff391819fbe9be5ff2640c47e6cdc059eb",
+			"keccak256": "0xd73f05373baf3bd4ef6ba576520ccce9eb5b68a765aa07e7597ced8ecf9eb27c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://75ef3e7616ebb4f09244d3f9fd77ac09e43e7d6c7060c4b15b514eb98acb499e",
-				"dweb:/ipfs/QmStf9pUNb25wxvZ57cH95Kpgh6wrmGr7ZLG2mSkCD9mFo"
+				"bzz-raw://e7446429db2e30ae2bb03a247279fc2bc310d56ec573ed1a34dfdefe094bdddc",
+				"dweb:/ipfs/QmT6exB3Pt78iZ1kdJiVAm1Mwzif9eRgh61DbiP3cd9v3G"
 			]
 		}
 	},
