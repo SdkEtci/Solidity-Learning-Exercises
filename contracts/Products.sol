@@ -4,13 +4,18 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract Products{
 
+    // struct mapping den daha fazla gas ödetir
     struct Product{
         uint8 barcode;
         uint8 station;
     }
+    // struct kullamak yerine mapping de kullanilabilir
+    // mapping(uint256 => uint8) productStation;
+
+    // herbir duragin cuzdani icin mapping
+    mapping (uint8 => address) stationWallets;
 
     Product[] productList;
-    mapping(uint8 => address) wallets;
     address owner;
 
     constructor(){
@@ -22,13 +27,22 @@ contract Products{
         _;
     }
 
+    function getStationWallet(uint8 _stationNumber) public view returns(address){
+        return stationWallets[_stationNumber];
+    }
+
+    function updateStationWallet(uint8 _stationWallet, address _walletAddress) public onlyOwner{
+        stationWallets[_stationWallet] = _walletAddress;
+    }
+
     function transfer_ownership(address _newOwner) public onlyOwner{
         owner = _newOwner;
     }
 
     function addProduct(uint8 _barcode, uint8 _station) public onlyOwner{
+        require(msg.sender == stationWallets[_station], "Not allowed.");
         require(_station <= 3 && _station >= 1, "Station value is invalid.");
-        require(! isThereBarcode(_barcode), "Barcode already used.");
+        require(!isThereBarcode(_barcode), "Barcode already used.");
 
         Product memory newProduct = Product({
             barcode: _barcode,
