@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "get_treasure",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SecondContract.sol": "SecondContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SecondContract.sol": {
+			"keccak256": "0xa85e7c810e3a4d20eb7042a3ef9c8d690df54230bf296f3120b611dfe86d6815",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2444e342d0f6d4b5d5bd5413e0213ba3c8547076892226902c43f617f80d881f",
+				"dweb:/ipfs/QmXgV5F7Vi2rwjS9hPHfASvR99Q4egxMWmmMQDaRJQXqsT"
+			]
+		}
+	},
+	"version": 1
+}

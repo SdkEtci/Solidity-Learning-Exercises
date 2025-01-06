@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_contractAddress",
+						"type": "address"
+					}
+				],
+				"name": "get_treasure_in_contract",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/FirstContract.sol": "FirstContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/FirstContract.sol": {
+			"keccak256": "0x82188ebccc06de8f1029aeaac400f997f298fe235f2cee5aec93439077182936",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6b183d3b7a4f12f8dea5485f5d78292471ad909a1bdd3ffba42d82e382cb32c8",
+				"dweb:/ipfs/QmcVWsvyE5qQS3sgb6i5KNrVojX3bLT9NXGHZDVpcpfGfu"
+			]
+		}
+	},
+	"version": 1
+}
