@@ -11,7 +11,7 @@ contract Second{
         // String leri birbiriyle dogrudan karsilastiramiyoruz
         // Bu sebeple string lerin hash sonuclarini kontrol ediyoruz
         // keccak -> byte 32 
-        require(keccak256(_name) != keccak256("Sidika"));
+        //require(keccak256(_name) != keccak256("Sidika"));
         walletName[msg.sender] = _name;
     }
 
