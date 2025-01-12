@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Helper library for emitting standardized panic codes. ```solidity contract Example {      using Panic for uint256;      // Use any of the declared internal constants      function foo() { Panic.GENERIC.panic(); }      // Alternatively      function foo() { Panic.panic(Panic.GENERIC); } } ``` Follows the list from https://github.com/ethereum/solidity/blob/v0.8.24/libsolutil/ErrorCodes.h[libsolutil]. _Available since v5.1._",
+			"kind": "dev",
+			"methods": {},
+			"stateVariables": {
+				"ARRAY_OUT_OF_BOUNDS": {
+					"details": "array out of bounds access"
+				},
+				"ASSERT": {
+					"details": "used by the assert() builtin"
+				},
+				"DIVISION_BY_ZERO": {
+					"details": "division or modulo by zero"
+				},
+				"EMPTY_ARRAY_POP": {
+					"details": "empty array pop"
+				},
+				"ENUM_CONVERSION_ERROR": {
+					"details": "enum conversion error"
+				},
+				"GENERIC": {
+					"details": "generic / unspecified error"
+				},
+				"INVALID_INTERNAL_FUNCTION": {
+					"details": "calling invalid internal function"
+				},
+				"RESOURCE_ERROR": {
+					"details": "resource error (too large allocation or too large array)"
+				},
+				"STORAGE_ENCODING_ERROR": {
+					"details": "invalid encoding in storage"
+				},
+				"UNDER_OVERFLOW": {
+					"details": "arithmetic underflow or overflow"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Exercises/Exercise4/Token_flattened.sol": "Panic"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Exercises/Exercise4/Token_flattened.sol": {
+			"keccak256": "0x5f8bee1c6bf29b49f4c1948fbfa7bb4f2d02d4c80425229c266d5cee67646f12",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7b0fa449a60b2f97a1089ed54f050a10b5f4fd8649124b724b1a6ae58d70b400",
+				"dweb:/ipfs/Qmas15Htn9D22VbMTk22Hrp1RZnunT9NE14tXs6nTkTCUR"
+			]
+		}
+	},
+	"version": 1
+}

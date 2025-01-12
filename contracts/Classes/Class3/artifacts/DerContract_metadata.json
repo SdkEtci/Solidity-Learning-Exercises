@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "id",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "setID",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Classes/Class3/KapsulToken.sol": "DerContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Classes/Class3/KapsulToken.sol": {
+			"keccak256": "0x24824864ef621453d38110a2ad0fa0b9d0861da3ae1c9cda6d502adbaecbce91",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f8da6dd346db599f9cc38da32fa3ec8048567a9b77d9f9afcb60ca284bca3632",
+				"dweb:/ipfs/QmbwBtfcgPtgwDZh9yMJZzvSKtk7kDnFjz9khshLhcUo6Y"
+			]
+		}
+	},
+	"version": 1
+}

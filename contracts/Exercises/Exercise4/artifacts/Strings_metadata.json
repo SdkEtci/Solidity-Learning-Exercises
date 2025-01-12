@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "length",
+						"type": "uint256"
+					}
+				],
+				"name": "StringsInsufficientHexLength",
+				"type": "error"
+			}
+		],
+		"devdoc": {
+			"details": "String operations.",
+			"errors": {
+				"StringsInsufficientHexLength(uint256,uint256)": [
+					{
+						"details": "The `value` string doesn't fit in the specified `length`."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Exercises/Exercise4/Token_flattened.sol": "Strings"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Exercises/Exercise4/Token_flattened.sol": {
+			"keccak256": "0x5f8bee1c6bf29b49f4c1948fbfa7bb4f2d02d4c80425229c266d5cee67646f12",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7b0fa449a60b2f97a1089ed54f050a10b5f4fd8649124b724b1a6ae58d70b400",
+				"dweb:/ipfs/Qmas15Htn9D22VbMTk22Hrp1RZnunT9NE14tXs6nTkTCUR"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "createNewSecondContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Classes/Class3/FirstContract.sol": "FirstContract"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Classes/Class3/FirstContract.sol": {
+			"keccak256": "0xbd6a4d32a45e81749a3996dfd7ea9f86e52539e89db78bb44a15a0eb8efc9d42",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://846115601f7e204896fc108c84aed2f8f9cc1f87b8a5cdd27148900b4856f9bc",
+				"dweb:/ipfs/QmYC1BaUhP5RqdAqTyxPUu8a5pyjrwKhe7eKwFkcWdhBQT"
+			]
+		}
+	},
+	"version": 1
+}
