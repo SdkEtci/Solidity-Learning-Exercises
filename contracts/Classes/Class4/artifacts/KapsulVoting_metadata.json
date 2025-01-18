@@ -1,0 +1,235 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_projectName",
+						"type": "string"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_teamsWallets",
+						"type": "address[]"
+					}
+				],
+				"name": "addProject",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"name": "getIsVoted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint8",
+						"name": "_projectID",
+						"type": "uint8"
+					}
+				],
+				"name": "getProjectDetail",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint8",
+								"name": "id",
+								"type": "uint8"
+							},
+							{
+								"internalType": "string",
+								"name": "projectName",
+								"type": "string"
+							},
+							{
+								"internalType": "address[]",
+								"name": "teamWallets",
+								"type": "address[]"
+							},
+							{
+								"internalType": "uint8",
+								"name": "voteCount",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct KapsulVoting.Project",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_projectName",
+						"type": "string"
+					}
+				],
+				"name": "getProjectIDByName",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					}
+				],
+				"name": "getWalletGroup",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "_teamsWallets",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_groupNumber",
+						"type": "uint8"
+					}
+				],
+				"name": "identifyWallets",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_projectName",
+						"type": "string"
+					}
+				],
+				"name": "isGroupAdded",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_wallet",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_projectName",
+						"type": "string"
+					}
+				],
+				"name": "vote",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Classes/Class4/KapsulVoting.sol": "KapsulVoting"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Classes/Class4/KapsulVoting.sol": {
+			"keccak256": "0x0775ad12ab9056209e800eeb3b9fdfe92982d6ed0ba7a4e4bdebddba69324629",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://93d788f22c4ce96d6fde6ae3e557bfe313cfa9384508d2c89f6c740a47a2383e",
+				"dweb:/ipfs/QmZL5zhU4nmE1w3qLU6mg6ig46mHuW35DNz4ypLRshSeQf"
+			]
+		}
+	},
+	"version": 1
+}
