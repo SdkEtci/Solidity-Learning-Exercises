@@ -32,7 +32,6 @@ contract KapsulVoting {
         identifyWallets(_teamsWallets, groupCount);
         groupCount++;
         return true;
-
     }
     
     function isGroupAdded(string memory _projectName) view  public returns(bool){
@@ -73,6 +72,7 @@ contract KapsulVoting {
         }
         return true;
     }
+
     // getter   functions
     function getWalletGroup(address _wallet) public view returns(uint8) {
         return walletGroup[_wallet];
