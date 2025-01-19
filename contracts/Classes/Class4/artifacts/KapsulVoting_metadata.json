@@ -154,33 +154,32 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_projectName",
-						"type": "string"
-					}
-				],
-				"name": "isGroupAdded",
-				"outputs": [
+						"internalType": "uint8",
+						"name": "_id",
+						"type": "uint8"
+					},
 					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
+						"internalType": "string",
+						"name": "_newProjectName",
+						"type": "string"
+					},
+					{
+						"internalType": "address[]",
+						"name": "_newTeamWallets",
+						"type": "address[]"
 					}
 				],
-				"stateMutability": "view",
+				"name": "updateProject",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_wallet",
-						"type": "address"
-					},
-					{
-						"internalType": "string",
-						"name": "_projectName",
-						"type": "string"
+						"internalType": "uint8",
+						"name": "_projectID",
+						"type": "uint8"
 					}
 				],
 				"name": "vote",
@@ -223,11 +222,11 @@
 	},
 	"sources": {
 		"contracts/Classes/Class4/KapsulVoting.sol": {
-			"keccak256": "0x0775ad12ab9056209e800eeb3b9fdfe92982d6ed0ba7a4e4bdebddba69324629",
+			"keccak256": "0x07811f6d7e79545974652d8b915ecc0a2c0afa54090288d2ddcb61d9e80e59c7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://93d788f22c4ce96d6fde6ae3e557bfe313cfa9384508d2c89f6c740a47a2383e",
-				"dweb:/ipfs/QmZL5zhU4nmE1w3qLU6mg6ig46mHuW35DNz4ypLRshSeQf"
+				"bzz-raw://87f8a2d9ce254c45696b192e52b89d5cbad45500380e2c37f8c972af11208bff",
+				"dweb:/ipfs/Qma4cvvxGKJ75EwVFNDKhYKiX5L55HVCnMRwy2FY4AELCs"
 			]
 		}
 	},

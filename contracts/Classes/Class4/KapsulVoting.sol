@@ -19,7 +19,7 @@ contract KapsulVoting {
     // addding  projects
     uint8 groupCount = 1;
     function  addProject(string memory _projectName, address[] memory _teamsWallets) public returns(bool){
-        require(!isGroupAdded(_projectName), "The project had previously added.");
+        require(projectIDByName[_projectName] == 0, "The project had previously added.");
 
         Project memory _newProject = Project({
             id: groupCount,
@@ -29,24 +29,20 @@ contract KapsulVoting {
         });
 
         projectDetail[groupCount] = _newProject;
+        projectIDByName[_newProject.projectName] = _newProject.id;
         identifyWallets(_teamsWallets, groupCount);
+        
         groupCount++;
         return true;
-
     }
-    
-    function isGroupAdded(string memory _projectName) view  public returns(bool){
-        bytes memory tempEmptyStringTest = bytes(_projectName); 
-        if (tempEmptyStringTest.length == 0) {
-            return false;
-        }
+
+    function updateProject(uint8 _id, string memory _newProjectName, address[] memory _newTeamWallets) public{
+        require(walletGroup[msg.sender] == _id, "You can not change another project details.");
         
-        for (uint8 i = 0; i < groupCount; i++) 
-        {
-            if(keccak256(bytes(projectDetail[i].projectName)) == keccak256(bytes(_projectName)))
-                return true;
-        }
-        return false;
+        Project storage _newProject = projectDetail[_id];
+
+        _newProject.projectName = _newProjectName;
+        _newProject.teamWallets = _newTeamWallets;
     }
 
     function identifyWallets(address[] memory _teamsWallets, uint8 _groupNumber) public returns(bool){
@@ -54,25 +50,24 @@ contract KapsulVoting {
         {
             require(walletGroup[_teamsWallets[i]] == 0, "Wallet had previously added.");
             walletGroup[_teamsWallets[i]] = _groupNumber;
-            isVoted[_teamsWallets[i]] = false;
+            isVoted[_teamsWallets[i]] = false; // default value is false
         }
         return true;
     }
 
     // vote
-    function vote(address _wallet, string memory _projectName) public returns(bool){
-        require(isGroupAdded(_projectName), "Please check the group name.");
-        require(!getIsVoted(_wallet), "You have already voted.");
+    function vote(uint8 _projectID) public returns(bool){
+        require(_projectID < groupCount, "Invalid project id.");
+        require(!getIsVoted(msg.sender), "You have already voted.");
+        require(walletGroup[msg.sender] != _projectID, "You can not vote your group.");
 
-        for (uint8 i = 0; i < groupCount; i++) 
-        {
-            if(keccak256(bytes(projectDetail[i].projectName)) == keccak256(bytes(_projectName))){
-                projectDetail[i].voteCount++;
-                isVoted[_wallet] = true;
-            }  
-        }
+        Project storage _project = projectDetail[_projectID];
+        _project.voteCount++;
+
+        isVoted[msg.sender] =true;
         return true;
     }
+
     // getter   functions
     function getWalletGroup(address _wallet) public view returns(uint8) {
         return walletGroup[_wallet];
