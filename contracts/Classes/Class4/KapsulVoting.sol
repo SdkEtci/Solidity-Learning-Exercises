@@ -16,6 +16,11 @@ contract KapsulVoting {
     mapping(address => uint8) walletGroup;
     mapping(address => bool) isVoted;
 
+    // events
+    event ProjectAdded(string projectName);
+    event Vote(uint8 projectID);
+    event ProjectUpdated(string projectName);
+
     // addding  projects
     uint8 groupCount = 1;
     function  addProject(string memory _projectName, address[] memory _teamsWallets) public returns(bool){
@@ -33,6 +38,7 @@ contract KapsulVoting {
         identifyWallets(_teamsWallets, groupCount);
         
         groupCount++;
+        emit ProjectAdded(_projectName);
         return true;
     }
 
@@ -43,6 +49,8 @@ contract KapsulVoting {
 
         _newProject.projectName = _newProjectName;
         _newProject.teamWallets = _newTeamWallets;
+
+        emit ProjectAdded(_newProjectName);
     }
 
     function identifyWallets(address[] memory _teamsWallets, uint8 _groupNumber) public returns(bool){
@@ -55,7 +63,6 @@ contract KapsulVoting {
         return true;
     }
 
-    // vote
     function vote(uint8 _projectID) public returns(bool){
         require(_projectID < groupCount, "Invalid project id.");
         require(!getIsVoted(msg.sender), "You have already voted.");
@@ -65,6 +72,7 @@ contract KapsulVoting {
         _project.voteCount++;
 
         isVoted[msg.sender] =true;
+        emit Vote(_projectID);
         return true;
     }
 

@@ -6,6 +6,45 @@
 	"output": {
 		"abi": [
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "projectName",
+						"type": "string"
+					}
+				],
+				"name": "ProjectAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "projectName",
+						"type": "string"
+					}
+				],
+				"name": "ProjectUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "projectID",
+						"type": "uint8"
+					}
+				],
+				"name": "Vote",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "string",
@@ -222,11 +261,11 @@
 	},
 	"sources": {
 		"contracts/Classes/Class4/KapsulVoting.sol": {
-			"keccak256": "0x07811f6d7e79545974652d8b915ecc0a2c0afa54090288d2ddcb61d9e80e59c7",
+			"keccak256": "0xaf67ec7ef33008dbb8ebeec5d4b8023f2749461c4d78a3d298543c667a2882b2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://87f8a2d9ce254c45696b192e52b89d5cbad45500380e2c37f8c972af11208bff",
-				"dweb:/ipfs/Qma4cvvxGKJ75EwVFNDKhYKiX5L55HVCnMRwy2FY4AELCs"
+				"bzz-raw://93f9eff1accb1008099d70544856b5028cf5f8075f68faccf136acee4194f666",
+				"dweb:/ipfs/QmWduEW6BoqzZmxP4gRxuEpFWQLbgxDn4G5mT1VSKiDKac"
 			]
 		}
 	},
